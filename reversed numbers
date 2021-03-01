@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int num,t, reverse = 0;
+    
+        printf("Enter any number to find reverse: ");
+    scanf("%d", &t);
+    
+    num = t;
+
+    if (num ==0) 
+    {
+        printf("The inputted data is Invalid");
+    }
+    else if (num !=0)
+    {
+        while(num != 0)
+    {
+        reverse = (reverse * 10) + (num % 10);
+        num /= 10;
+    }
+
+    printf("Revised for %d = %d",t, reverse);
+    }
+    return 0;
+}
