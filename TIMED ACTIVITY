@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main()
+{
+    int x[3][2];
+    int id, pin;
+   x[0][0]=0001;
+   x[0][1]=1000;
+   x[1][0]=0002;
+   x[1][1]=2000;
+   x[2][0]=0003;
+   x[2][1]=3000;
+    
+    printf("Enter ID Number: ");
+    scanf("%d", &id);
+    printf("Enter PIN: ");
+    scanf("%d", &pin); 
+    
+    
+    
+    if(id==x[0][0], pin==x[0][1])
+    {
+	printf("\nYou're successfully logged in ID# %d", id);
+    }else if(id==x[1][0], pin==x[1][1])
+    {
+	printf("\nYou're successfully logged in ID# %d", id);
+    }else if(id==x[2][0], pin==x[2][1])
+    {
+	printf("\nYou're successfully logged in ID# %d", id);
+    }else
+    {
+    printf("\nInvalid ID/PIN!");
+    }
+    
+    return 0;
+}
