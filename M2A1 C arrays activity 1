@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+#define MAX_SIZE 10
+
+ 
+
+// Function declaration
+
+int sum(int arr[], int start, int len);
+
+ 
+
+ 
+
+int main()
+
+{
+
+    int arr[MAX_SIZE];
+
+    int j, num, i, sumofarray;
+
+ 
+
+ 
+
+    // Input of size and elements in array
+
+    printf("size of array: ");
+
+    scanf("%d", &num);
+
+    
+
+    for(i=0; i<num; i++)
+
+    {
+
+        j=1+j;
+
+		printf("Elements %d: ",j);		scanf("%d", &arr[i]);
+
+    }
+
+ 
+
+ 
+
+    sumofarray = sum(arr, 0, num);
+
+    printf("Sum of all array elements: %d", sumofarray);
+
+ 
+
+    return 0;
+
+}
+
+ 
+
+// Recursively finding the sum of elements in an array.
+
+int sum(int arr[], int start, int len)
+
+{
+
+    // Recursion base condition
+
+    if(start >= len)
+
+        return 0;
+
+ 
+
+    return (arr[start] + sum(arr, start + 1, len));
+
+}
